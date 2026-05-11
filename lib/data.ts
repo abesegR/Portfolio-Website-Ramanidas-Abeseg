@@ -27,8 +27,16 @@ export const skillGroups: SkillGroup[] = [
     items: ["Java", "JavaScript", "C"],
   },
   {
-    category: "Frontend",
-    items: ["React", "Next.js", "HTML5 / CSS", "Tailwind", "Bootstrap"],
+    category: "Framework and Libraries",
+    items: [
+      "React",
+      "Next.js",
+      "HTML5 / CSS",
+      "Tailwind",
+      "Bootstrap",
+      "Angular",
+      "SpringBoot",
+    ],
   },
   {
     category: "Tools & Platforms",

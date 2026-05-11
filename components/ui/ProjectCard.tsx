@@ -1,20 +1,35 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
-import type { Project } from "@/types";
+
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  image: string; // Ensure data includes image paths
+  ongoing?: boolean;
+}
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const isOngoing = project.status === "ongoing";
-
   return (
-    <div className="border-2 border-primary h-full flex flex-col group hover:bg-surface transition-colors bg-white">
-      {/* 1. Project Image Thumbnail */}
-      <div className="relative w-full aspect-[16/9] overflow-hidden border-b-2 border-primary bg-secondary/5">
+    <motion.div
+      whileHover={{
+        y: -10, // Snappy lift
+        boxShadow: "8px 8px 0px 0px rgba(0,0,0,1)", // Neo-brutalism shadow
+      }}
+      // SNAPPY hover transition fix
+      transition={{ type: "tween", ease: "easeOut", duration: 0.1 }}
+      className="border-2 border-black h-full flex flex-col bg-white cursor-pointer group"
+    >
+      {/* 1. Image Thumbnail container */}
+      <div className="relative w-full aspect-video overflow-hidden border-b-2 border-black bg-surface-high">
         <Image
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
           sizes="(max-width: 768px) 100vw, 580px"
         />
       </div>
@@ -25,7 +40,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <h3 className="font-headline font-bold text-xl md:text-2xl leading-tight">
             {project.title}
           </h3>
-          {isOngoing && (
+          {project.ongoing && (
             <span className="bg-black text-white text-[10px] font-bold uppercase px-2 py-1 tracking-tighter shrink-0">
               Ongoing
             </span>
@@ -41,13 +56,13 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="bg-secondary/10 text-secondary font-label text-[10px] font-bold uppercase px-2 py-1 tracking-widest"
+              className="bg-gray-100 text-secondary font-headline text-[10px] font-bold uppercase px-2 py-1 tracking-widest border border-gray-200"
             >
               {tag}
             </span>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
