@@ -20,9 +20,41 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ramanidas Abeseg | Portfolio",
+  title: "Abeseg | Portfolio",
   description:
-    "Undergraduate software engineer passionate about AI and web development.",
+    "Web developer based in Sri Lanka — projects, skills and contact",
+  keywords: ["Abeseg", "portfolio", "web developer", "frontend", "Sri Lanka"],
+  authors: [{ name: "Abeseg" }],
+  metadataBase: new URL("https://abeseg.me"),
+
+  // Open Graph — shows preview on Google, LinkedIn, WhatsApp
+  openGraph: {
+    title: "Abeseg | Portfolio",
+    description: "Web developer based in Sri Lanka",
+    url: "https://abeseg.me",
+    siteName: "Abeseg Portfolio",
+    images: [
+      {
+        url: "/preview.png", // add a 1200x630px screenshot of your site
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+
+  // Twitter/X card
+  twitter: {
+    card: "summary_large_image",
+    title: "Abeseg | Portfolio",
+    description: "Web developer based in Sri Lanka",
+    images: ["/preview.png"],
+  },
+
+  // Google verification
+  verification: {
+    google: "ZMXc8nWdgSPKJQzpNOzC5KK_XxTT93Zansl...",
+  },
 };
 
 export default function RootLayout({
