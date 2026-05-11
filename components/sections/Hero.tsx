@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="max-w-[1200px] mx-auto px-6 md:px-10 py-32 min-h-screen flex flex-col-reverse md:flex-row items-center justify-between gap-12"
+      className="max-w-container mx-auto px-6 md:px-10 py-32 min-h-screen flex flex-col-reverse md:flex-row items-center justify-between gap-12"
     >
       {/* Left */}
       <motion.div

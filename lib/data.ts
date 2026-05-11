@@ -8,6 +8,7 @@ export const projects: Project[] = [
       "Arduino-based plant health monitoring system integrated with a mobile application to track soil moisture, temperature, and humidity in real time.",
     tags: ["Arduino", "Java", "Android Studio"],
     status: "completed",
+    image: "/plant-monitor.jpg",
   },
   {
     id: "laptop-recommender",
@@ -16,6 +17,7 @@ export const projects: Project[] = [
       "Recommends laptops using a weighted scoring algorithm based on user preferences, performance needs, and budget.",
     tags: ["React", "Spring Boot", "Algorithms"],
     status: "ongoing",
+    image: "/laptop-recommender.jpg",
   },
 ];
 
