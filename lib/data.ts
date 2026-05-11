@@ -110,6 +110,6 @@ export const contact = {
   email: "ramanidasabesegprof@gmail.com",
   location: "Kalutara South, Sri Lanka",
   linkedin: "https://www.linkedin.com/in/ramanidas-abeseg",
-  github: "https://github.com/AbesegRamanidas",
+  github: "https://github.com/abesegR",
   hackerrank: "https://www.hackerrank.com/profile/abesegramanidas",
 };
