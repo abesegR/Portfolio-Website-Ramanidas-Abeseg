@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Geist Mono", monospace;
+
+  --color-primary: #000000;
+  --color-secondary: #5d5f5f;
+  --color-background: #f9f9fa;
+  --color-surface: #ffffff;
+  --color-surface-high: #e8e8e9;
+  --color-on-primary: #ffffff;
+  --color-on-background: #1a1c1d;
+  --color-inverse-surface: #2f3132;
+  --color-outline: #7e7576;
+  --color-outline-variant: #cfc4c5;
+
+  --spacing-section: 8rem;
+  --spacing-container: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
