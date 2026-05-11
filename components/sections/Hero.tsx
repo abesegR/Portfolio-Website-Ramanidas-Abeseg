@@ -39,16 +39,16 @@ export default function Hero() {
           practical solutions.
         </p>
 
-        <div className="flex items-center gap-4 pt-4">
+        <div className="flex flex-wrap items-center gap-4 pt-4">
           <a
             href="#projects"
-            className="bg-primary text-on-primary font-label text-sm uppercase tracking-widest px-8 py-3 hover:opacity-80 transition-opacity"
+            className="bg-primary text-on-primary font-label text-sm uppercase tracking-widest px-6 sm:px-8 py-3 hover:opacity-80 transition-opacity"
           >
             View Work
           </a>
           <a
             href="#contact"
-            className="border-2 border-primary text-primary font-label text-sm uppercase tracking-widest px-8 py-3 hover:bg-primary hover:text-on-primary transition-all"
+            className="border-2 border-primary text-primary font-label text-sm uppercase tracking-widest px-6 sm:px-8 py-3 hover:bg-primary hover:text-on-primary transition-all"
           >
             Contact Me
           </a>
